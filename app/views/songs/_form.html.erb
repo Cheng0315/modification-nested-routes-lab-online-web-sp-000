@@ -1,4 +1,5 @@
 <%= form_for @song  do |f| %>
+binding.pry
   <% if @song.artist_id.nil? %>
   <%= artist_select(:artist_id, f) %>
   <% else %>
