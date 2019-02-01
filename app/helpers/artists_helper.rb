@@ -3,7 +3,7 @@ module ArtistsHelper
     song.artist.nil? ? link_to("Add Artist", edit_song_path(song)) : link_to(song.artist_name, artist_path(song.artist))
   end
 
-  def artist_select(artist_id, f)
+  def artist_select(f)
     f.select :artist_id, options_from_collection_for_select(Artist.all, :id, :name)
   end
 end
