@@ -44,7 +44,7 @@ class SongsController < ApplicationController
 
   def edit
     if params[:artist_id]
-      @author = Artist.find_by(params[:artist_id])
+      @author = Artist.find_by(id: params[:artist_id])
       if @author.nil?
         redirect_to artists_path
       else
