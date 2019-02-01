@@ -4,6 +4,6 @@ module ArtistsHelper
   end
 
   def artist_select(artist_id, f)
-    f.select artist_id, options_from_collection_for_select(Artist.all, :id, :name)
+    f.select :artist_id, options_from_collection_for_select(Artist.all, :id, :name)
   end
 end
