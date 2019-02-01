@@ -25,10 +25,10 @@ class SongsController < ApplicationController
   end
 
   def new
-    if params[:artist_id] && !!Artist.find_by(id: params[:artist_id])
-      @song = Song.new(artist_id: params[:artist_id])
+    if params[:artist_id] && !Artist.find_by(id: params[:artist_id])
+      redirect_to artists_path 
     else
-      redirect_to artists_path
+      @song = Song.new(artist_id: params[:artist_id])
     end
   end
 
