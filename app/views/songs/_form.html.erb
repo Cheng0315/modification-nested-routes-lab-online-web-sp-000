@@ -1,5 +1,5 @@
 <%= form_for @song  do |f| %>
-  <% if @song.artist_id %>
+  <% if @song.artist_id.nil? %>
   <%= f.label :title %>
   <%= f.text_field :title %><br>
   <%= f.label :artist_name %>
