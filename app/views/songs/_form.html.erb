@@ -1,6 +1,7 @@
 <%= form_for @song  do |f| %>
-<%binding.pry%>
+
   <% if @song.artist_id.nil? %>
+  <%binding.pry%>
   <%= artist_select(:artist_id, f) %>
   <% else %>
   <%= f.label :title %>
